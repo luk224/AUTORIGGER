@@ -1,0 +1,10 @@
+//Curve/Wireframe Color - Black
+string $selClr[] = `ls -sl`;
+//For all objects in selection, run the following commands..
+for ($all in $selClr){
+    //Enable color override...
+    setAttr ($all + ".overrideEnabled") 1;
+    //Recolor curve/wireframe Blue...
+    setAttr ($all + ".overrideColor") 1;
+
+}

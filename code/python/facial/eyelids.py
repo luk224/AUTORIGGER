@@ -1,4 +1,7 @@
 import maya.cmds as cmds
+from Controls import createControl
+
+createControl()
 sele = cmds.ls(sl=1)
 print(len(sele))
 
@@ -106,7 +109,7 @@ for c in listaJointsCtrCurve:
     #name= c.replace ('clusterHandle', 'ctl')
     name = c.replace('jntCtlCurve','ctl')
     print name
-    ctl = createControl(nameCtrl= name,rotateTo=c,translateTo=c, scale = 1, direccion = 'z')
+    ctl = createControl(nameCtrl= name, rotateTo=c, translateTo=c, scale = 1, direccion ='z')
     cmds.pointConstraint (ctl,c)
     ctl_grp  = cmds.pickWalk(d='up')[0]
     cmds.parent(ctl_grp , ctls)

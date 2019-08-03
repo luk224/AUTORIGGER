@@ -5,11 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f545dad5-2f4a-4d32-9937-45841a74dd8a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Escuela/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thingToRunInMaya/connectToPyCharm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thingToRunInMaya/setDirectoryToRunScriptsInMaya" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/facial/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/LocatorAlignmentTool.mel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/alignPositionTool.mel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/centerPivot.mel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/colorToBlack.mel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/colorToBlue.mel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/colorToGreen.mel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/colorToRed.mel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/mirrorInX.mel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/openConnectionEditor.mel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/parentShapes.mel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/reorientJoints.mel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/showLocalAxis.mel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Escuela/splineJointsScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/splineJointsScript.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controls/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/facial/eyelids.py" beforeDir="false" afterPath="$PROJECT_DIR$/facial/eyelids.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poleVector_pos.py" beforeDir="false" afterPath="$PROJECT_DIR$/poleVector_pos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selectInfluencedJoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectInfluencedJoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/colorToYellow.mel" beforeDir="false" afterPath="$PROJECT_DIR$/tools/colorToYellow.mel" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,68 +36,24 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/locator_to_joints.py">
+        <entry file="file://$PROJECT_DIR$/mainFile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            <state relative-caret-position="335">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controls/formasControl.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thingToRunInMaya/connectToPyCharm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__init__.py">
+        <entry file="file://$PROJECT_DIR$/tools/changeOverrideColorOfSelected.mel">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/facial/eyelids.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1211">
-              <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainFile.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/poleVector_pos.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/selectInfluencedJoints.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Escuela/splineJointsScript.py">
+        <entry file="file://$PROJECT_DIR$/tools/openConnectionEditor.mel">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -95,6 +67,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>E:\Univerdad\TFG\AUTORIGGER\code\python\tools</dir>
+    </dirStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -103,21 +80,27 @@
       <list>
         <option value="$PROJECT_DIR$/fk_IK_Sqwitch.py" />
         <option value="$PROJECT_DIR$/locator_to_joints.py" />
-        <option value="$PROJECT_DIR$/mainFile.py" />
         <option value="$PROJECT_DIR$/Controls/formasControl.py" />
         <option value="$PROJECT_DIR$/thingToRunInMaya/connectToPyCharm.py" />
         <option value="$PROJECT_DIR$/thingToRunInMaya/setDirectoryToRunScriptsInMaya" />
+        <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/facial/eyelids.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/python.iml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/selectInfluencedJoints.py" />
+        <option value="$PROJECT_DIR$/poleVector_pos.py" />
+        <option value="$PROJECT_DIR$/tools/colorToYellow.mel" />
+        <option value="$PROJECT_DIR$/tools/colorToRed.mel" />
+        <option value="$PROJECT_DIR$/tools/colorToBlue.mel" />
+        <option value="$PROJECT_DIR$/tools/colorToGreen.mel" />
+        <option value="$PROJECT_DIR$/tools/colorToBlack.mel" />
+        <option value="$PROJECT_DIR$/tools/LocatorAlignmentTool.mel" />
+        <option value="$PROJECT_DIR$/mainFile.py" />
+        <option value="$PROJECT_DIR$/tools/mirrorInX.mel" />
+        <option value="$PROJECT_DIR$/tools/alignPositionTool.mel" />
+        <option value="$PROJECT_DIR$/tools/parentShapes.mel" />
+        <option value="$PROJECT_DIR$/tools/reorientJoints.mel" />
+        <option value="$PROJECT_DIR$/tools/centerPivot.mel" />
+        <option value="$PROJECT_DIR$/tools/showLocalAxis.mel" />
+        <option value="$PROJECT_DIR$/tools/openConnectionEditor.mel" />
       </list>
     </option>
   </component>
@@ -165,6 +148,11 @@
               <item name="python" type="462c0819:PsiDirectoryNode" />
               <item name="thingToRunInMaya" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -173,13 +161,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mainFile.py" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tools" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Univerdad\TFG\AUTORIGGER\code\python\tools" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Univerdad\TFG\AUTORIGGER\code\python\Escuela" />
+      <recent name="E:\Univerdad\TFG\AUTORIGGER\code\python\Controls" />
+      <recent name="E:\Univerdad\TFG\AUTORIGGER\code\python\facial" />
       <recent name="E:\Univerdad\TFG\AUTORIGGER\code\python" />
+      <recent name="E:\Univerdad\TFG\AUTORIGGER\code\python\Escuela" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -234,9 +228,9 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="MayaLog" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -246,30 +240,29 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fk_IK_Sqwitch.py">
+    <entry file="file://$PROJECT_DIR$/thingToRunInMaya/setDirectoryToRunScriptsInMaya">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        <state relative-caret-position="17">
+          <caret line="1" column="58" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/poleVector_pos.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/mocAttributeReorder/Mok_AttributeReorder.JPG">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/selectInfluencedJoints.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Escuela/splineJointsScript.py">
+    <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainFile.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/thingToRunInMaya/connectToPyCharm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controls/formasControl.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -278,37 +271,163 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thingToRunInMaya/setDirectoryToRunScriptsInMaya">
+    <entry file="file://$PROJECT_DIR$/Controls/createControl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="58" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thingToRunInMaya/connectToPyCharm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
+    <entry file="file://$PROJECT_DIR$/Controls/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mocAttributeReorder/Mok_AttributeReorder.JPG">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/facial/eyelids.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ptvsd/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selectInfluencedJoints.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/splineJointsScript.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="16" selection-start-column="48" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poleVector_pos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/colorToBlack.mel">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/colorToGreen.mel">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/colorToBlue.mel">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/colorToRed.mel">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/colorToYellow.mel">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fk_IK_Sqwitch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/locator_to_joints.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
+        <state relative-caret-position="374">
           <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/facial/eyelids.py">
+    <entry file="file://$PROJECT_DIR$/tools/LocatorAlignmentTool.mel">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1211">
-          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+        <state relative-caret-position="289">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/mirrorInX.mel">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/alignPositionTool.mel">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/parentShapes.mel">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="56" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/reorientJoints.mel">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/centerPivot.mel">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/showLocalAxis.mel">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/changeOverrideColorOfSelected.mel">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/openConnectionEditor.mel">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>

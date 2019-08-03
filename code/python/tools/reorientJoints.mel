@@ -1,0 +1,21 @@
+////RJT - reorients all selected joints.
+//Orientacion inicial a 0 0 0
+
+
+//Query selection....
+string $selJnt[] = `ls -sl -type joint`;
+//For all selected joints, do the following...
+for ($allJnts in $selJnt){
+//Find the rotional values of selected joints...
+float $get_jnt_rx = `getAttr ($allJnts + ".rx")`;
+float $get_jnt_ry = `getAttr ($allJnts + ".ry")`;
+float $get_jnt_rz = `getAttr ($allJnts + ".rz")`;
+//Set each joint's Orient value to its Rotate value...
+setAttr ($allJnts + ".jointOrientX") $get_jnt_rx;
+setAttr ($allJnts + ".jointOrientY") $get_jnt_ry;
+setAttr ($allJnts + ".jointOrientZ") $get_jnt_rz;
+//Set each joint's Rotate value to zero...
+setAttr ($allJnts + ".rx") 0;
+setAttr ($allJnts + ".ry") 0;
+setAttr ($allJnts + ".rz") 0;
+}

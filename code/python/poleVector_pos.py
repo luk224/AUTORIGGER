@@ -1,7 +1,4 @@
 from maya import cmds , OpenMaya
-selection = cmds.ls(sl=1)
-selection
-posPole = getPolePosition(selection, 2)
 
 def getPolePosition (chain=[] ,offset = 5) :
 	''' Method to get poleVector position

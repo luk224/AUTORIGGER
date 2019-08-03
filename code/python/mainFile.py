@@ -1,7 +1,8 @@
-from Escuela import splineJointsScript
+import splineJointsScript
 
 reload(splineJointsScript)
-from Escuela.splineJointsScript import splineJoints
+from splineJointsScript import splineJoints
+
 
 
 # Este script permite crear 3 c cadenas de huesos(rotacion, posicion y bindeo) a partir de una curva, un control
@@ -35,6 +36,7 @@ class mainClass:
 
     def __init__(self):
         print("init mainClass")
+
 
     def makeChain(self,side="cn", name="tentacle",zone="A"):
 
