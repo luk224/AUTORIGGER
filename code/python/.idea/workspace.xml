@@ -5,27 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f545dad5-2f4a-4d32-9937-45841a74dd8a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/facial/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/LocatorAlignmentTool.mel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/alignPositionTool.mel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/centerPivot.mel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/colorToBlack.mel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/colorToBlue.mel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/colorToGreen.mel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/colorToRed.mel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/mirrorInX.mel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/openConnectionEditor.mel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/parentShapes.mel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/reorientJoints.mel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/showLocalAxis.mel" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Escuela/splineJointsScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/splineJointsScript.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controls/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/facial/eyelids.py" beforeDir="false" afterPath="$PROJECT_DIR$/facial/eyelids.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poleVector_pos.py" beforeDir="false" afterPath="$PROJECT_DIR$/poleVector_pos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectInfluencedJoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/selectInfluencedJoints.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/colorToYellow.mel" beforeDir="false" afterPath="$PROJECT_DIR$/tools/colorToYellow.mel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/splineJointsScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/splineJointsScript.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,26 +16,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainFile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="93">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/changeOverrideColorOfSelected.mel">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tools/openConnectionEditor.mel">
+        <entry file="file://$PROJECT_DIR$/splineJointsScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" selection-start-column="16" selection-end-column="16" />
+            <state relative-caret-position="561">
+              <caret line="120" column="53" lean-forward="true" selection-start-line="120" selection-start-column="53" selection-end-line="120" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,7 +73,6 @@
         <option value="$PROJECT_DIR$/tools/colorToGreen.mel" />
         <option value="$PROJECT_DIR$/tools/colorToBlack.mel" />
         <option value="$PROJECT_DIR$/tools/LocatorAlignmentTool.mel" />
-        <option value="$PROJECT_DIR$/mainFile.py" />
         <option value="$PROJECT_DIR$/tools/mirrorInX.mel" />
         <option value="$PROJECT_DIR$/tools/alignPositionTool.mel" />
         <option value="$PROJECT_DIR$/tools/parentShapes.mel" />
@@ -101,6 +80,8 @@
         <option value="$PROJECT_DIR$/tools/centerPivot.mel" />
         <option value="$PROJECT_DIR$/tools/showLocalAxis.mel" />
         <option value="$PROJECT_DIR$/tools/openConnectionEditor.mel" />
+        <option value="$PROJECT_DIR$/splineJointsScript.py" />
+        <option value="$PROJECT_DIR$/mainFile.py" />
       </list>
     </option>
   </component>
@@ -147,11 +128,6 @@
               <item name="python" type="b2602c69:ProjectViewProjectNode" />
               <item name="python" type="462c0819:PsiDirectoryNode" />
               <item name="thingToRunInMaya" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -219,14 +195,9 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="MayaLog" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -234,6 +205,11 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="MayaLog" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -250,13 +226,7 @@
     <entry file="file://$PROJECT_DIR$/mocAttributeReorder/Mok_AttributeReorder.JPG">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py" />
     <entry file="file://$PROJECT_DIR$/thingToRunInMaya/connectToPyCharm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -295,16 +265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="24" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/splineJointsScript.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="16" selection-start-column="48" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -407,13 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainFile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/showLocalAxis.mel">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -421,13 +374,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/changeOverrideColorOfSelected.mel">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/openConnectionEditor.mel">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/changeOverrideColorOfSelected.mel">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/splineJointsScript.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="120" column="53" lean-forward="true" selection-start-line="120" selection-start-column="53" selection-end-line="120" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -97,6 +97,29 @@ class splineJoints:
             return Joints,JointsGrps
 
 
+    def  createJointChain(self,suffix='suffix'):
+        #Only create a joint chain in curve vtx positions.
+        Joints = []
+        posX = None
+        posZ = None
+        posCv = None
+        posY = None
+        jnt = None
+        for i in range(len(self.vtxs)):
+            cmds.select(cl=1)
+            posCv = cmds.xform(self.vtxs[i], q=1, ws=1, t=1)
+            posX = posCv[0]
+            posY = posCv[1]
+            posZ = posCv[2]
+            jnt = cmds.joint(n='{0}_{1}_{2}_{3}_{4}'.format(self.side, self.name, self.zone, str(i), suffix),
+                             p=posCv, a=1)
+            Joints.append(jnt)
+        for i in range(len(Joints)):
+
+            cmds.select(cl=1)
+            if (i > 0):
+                cmds.parent(Joints[i], Joints[i - 1])
+
 
 
     def createControls(self,suffix,thingsToControl,parentUpVectors=False,upVectors=''):

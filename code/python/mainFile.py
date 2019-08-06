@@ -16,7 +16,7 @@ import testScript
 reload(testScript)
 from testScript import mainClass
 
-autorigger.testFunction(side="cn", name="bigote",zone="A")
+autorigger.makeFakeIKChain(side="cn", name="bigote",zone="A")
 
 #Select curve.#
 ###############
@@ -38,9 +38,16 @@ class mainClass:
         print("init mainClass")
 
 
-    def makeChain(self,side="cn", name="tentacle",zone="A"):
+    def makeFakeIKChain(self,side="cn", name="tentacle",zone="A"):
 
         self.spine= splineJoints( side=side, name=name,zone=zone)
+
+    def makeOnlyChain(self, side='cn', name='name', zone='zone',suffix='jnt'):
+
+        self.spine = splineJoints( side=side, name=name,zone=zone)
+        self.defineCurve()
+        self.spine.createJointChain(suffix=suffix)
+
 
     def defineCurve(self):
         self.spine.defineCurve()
