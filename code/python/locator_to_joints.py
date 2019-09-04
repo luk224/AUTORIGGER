@@ -6,7 +6,7 @@ class SphereClass:
         self.numSpheres = maya.intField(minValue =1)
         maya.button(label = 'Make locators', command = self.makeLocators)
         maya.button(label = 'Make joints', command = self.makeJoints)
-        #maya.showWindow(win)
+        maya.showWindow(self.win)
         
         
     def makeSpheres(self, *args):           
