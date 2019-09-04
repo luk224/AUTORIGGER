@@ -1,3 +1,5 @@
+import maya.cmds as cmds
+
 
 def chain_joint(
 		ls_guias = [],

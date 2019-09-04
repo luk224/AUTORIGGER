@@ -1,0 +1,10 @@
+import maya.cmds as cmds
+
+class SkinWeights:
+    def __init__(self):
+        pass
+
+    def setSkinPercentToVertex(self, vertexList,bones, skinCluster):
+        #Para las aletas del octo por ejemplo, un Script que con una selección de vértices, permita establecer el peso.
+        #skinPercent -tv cn_tentacle_H_36_jnt -0.000535098 skinCluster32 -r true -prw 0 wings_01_skinned.vtx[545];
+        pass
