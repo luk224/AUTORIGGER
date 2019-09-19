@@ -1,7 +1,23 @@
+import maya.cmds as cmds
 #Se van a crear los huesos debajo de dos grupos:
     #Grupo SDK controlado por ParentConstraint a Jaw y Mouth
     #Grupo Attach controlado por la ribbon
 #Despues de ejecutar el script habra que poner con driven key a un atributo los parent constraints y colocarlo con el GraphEditor.
+
+##Cargar esta funcion y CreateControl
+def remap(OldMin, OldMax, NewMin,NewMax, OldValue):
+	NewValue = 0
+	OldRange = (OldMax - OldMin)
+	if (OldRange == 0):
+		NewValue = NewMin
+	else:
+		NewRange = (NewMax - NewMin)
+		NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin
+
+	return NewValue
+
+
+
 
 #################################################################
 ######Select Control of Jaw to add Sticky Lips Attributes#####
@@ -22,11 +38,10 @@ sdk_mouth_loc=cmds.ls(sl=1, fl =1)[0]
 #Select RibbonSurface#
 ribbon_surface=cmds.ls(sl=1, fl =1)[0]
 
-labioInferior =True
+labioInferior =False
 
 parentConstraintsToJaw = []
 parentConstraintsToMouth = []
- 
 
 
 ##############
@@ -173,15 +188,4 @@ for i in range (len(vtxs)):
 
 
 
-
-def remap(OldMin, OldMax, NewMin,NewMax, OldValue):
-	NewValue = 0
-	OldRange = (OldMax - OldMin)
-	if (OldRange == 0):
-		NewValue = NewMin
-	else:
-		NewRange = (NewMax - NewMin)  
-		NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin
-
-	return NewValue
 
