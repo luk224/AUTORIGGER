@@ -1,0 +1,497 @@
+//Date created ; 25-04-2018
+//Created by Rahul Deb Barman @ India
+//Last modified : 26-04-2018
+global proc multiController()
+{
+//________________________________Window___________________
+if (`window -ex mtCwin`)
+deleteUI mtCwin;
+window -s off -w 355 -h 100 -t "Multi Controller" mtCwin;
+
+//________________________________Head___________________
+columnLayout -w 355 -adj on;
+separator -st "none"  -vis on -h 10 ;
+text -l " © Rahul D's Multi Controller";
+
+separator -st "none"  -vis on -h 10 ;
+
+rowColumnLayout -h 25 -nc 34 ;
+text -w 83 -l"" ;
+button -l"" -en off -w 8  -bgc .631 .631 .631 ;
+button -l"" -en off -w 8  -bgc .467 .467 .467 ;
+button -l"" -en off -w 8  -bgc 0 0 0 ;
+button -l"" -en off -w 8  -bgc .247 .247 .247 ;
+button -l"" -en off -w 8  -bgc .498 .498 .498 ;
+button -l"" -en off -w 8  -bgc 0.608 0 0.157 ;
+button -l"" -en off -w 8  -bgc 0 0.016 0.373 ;
+button -l"" -en off -w 8  -bgc 0 0 1 ;
+button -l"" -en off -w 8  -bgc 0 0.275 0.094 ;
+button -l"" -en off -w 8  -bgc 0.145 0 0.263;
+button -l"" -en off -w 8  -bgc 0.78 0 0.78 ;
+button -l"" -en off -w 8  -bgc 0.537 0.278 0.2 ;
+button -l"" -en off -w 8  -bgc 0.243 0.133 0.122 ;
+button -l"" -en off -w 8  -bgc 0.6 0.145 0 ;
+button -l"" -en off -w 8  -bgc 1 0 0 ;
+button -l"" -en off -w 8  -bgc 0 1 0;
+button -l"" -en off -w 8  -bgc 0 0.255 0.6 ;
+button -l"" -en off -w 8  -bgc 1 1 1;
+button -l"" -en off -w 8  -bgc 1 1 0 ;
+button -l"" -en off -w 8  -bgc 0.388 0.863 1 ;
+button -l"" -en off -w 8  -bgc 0.263 1 0.635;
+button -l"" -en off -w 8  -bgc 1 0.686 0.686 ;
+button -l"" -en off -w 8  -bgc 0.89 0.675 0.475 ;
+button -l"" -en off -w 8  -bgc 1 1 0.384 ;
+button -l"" -en off -w 8  -bgc 0 0.6 0.325 ;
+button -l"" -en off -w 8  -bgc 0.627 0.412 0.188 ;
+button -l"" -en off -w 8  -bgc 0.62 0.627 0.188 ;
+button -l"" -en off -w 8  -bgc 0.408 0.627 0.188 ;
+button -l"" -en off -w 8  -bgc 0.188 0.627 0.365 ;
+button -l"" -en off -w 8  -bgc 0.188 0.627 0.627 ;
+button -l"" -en off -w 8  -bgc 0.188 0.404 0.627 ;
+button -l"" -en off -w 8  -bgc 0.435 0.188 0.627 ;
+button -l"" -en off -w 8  -bgc 0.631 0.188 0.412 ;
+setParent -u;
+
+columnLayout ;
+colorIndexSliderGrp -w 352 -min 0 -max 32 -value 14 cslider;
+rowColumnLayout -nc 4 -cs 2 2;
+button  -w 60 -l "Color" -c colorbtn;
+button  -w 60 -l "Shape" -c changeShape;
+text  -l"" -w 2;
+optionMenuGrp -adj on -l "Ctrl Shape:" cShape; 
+menuItem -l "Cube";
+menuItem -l "Circle";
+menuItem -l "Square";
+menuItem -l "Locator";
+menuItem -l "Sphere";
+menuItem -l "Pin";
+menuItem -l "Plus";
+menuItem -l "Th. Plus";
+
+setParent -u;
+
+separator -w 355 -st "none"  -vis on -h 3 ;
+
+rowColumnLayout -nc 2 -cs 2 2;
+button -h 17 -w 120 -l "Parent Chain" -c parentChain;
+button -h 17 -w 50 -l "Joint" -c loopJoint;
+setParent -u;
+
+separator -w 355 -st "none"  -vis on -h 5 ;
+rowColumnLayout -nc 3;
+text -w 74 -l "Object Type:" stype;
+radioCollection ;
+radioButton -l "Mesh" -sl -cc msh msh;
+radioButton -l "Others" -cc othr othr;
+setParent -u;
+separator -w 355 -st "in"  -vis on -h 8 ;
+
+rowColumnLayout -nc 4 -vis (`radioButton  -q -sl othr`) rcOthr;
+text -w 50 -l "";
+checkBox -w 100 -l "Ctrl" cto;
+checkBox -w 100 -l "FK Ctrl"  fko;
+checkBox -w 100 -l "Parent Cons."  pto;
+setParent -u;
+rowColumnLayout -h 19  -vis (`radioButton  -q -sl othr`) ccOthr;
+text -l "";
+setParent -u;
+
+rowColumnLayout -nc 4 rcJoint;
+text -w 50 -l"";
+checkBox -w 100 -l "Ctrl"  ct;
+checkBox -w 100 -l "FK Ctrl" fk;
+checkBox -w 100 -l "Joint" -cc jt jt;
+setParent -u;
+
+rowColumnLayout -nc 4 ccJoint;
+text -w 50 -l"";
+checkBox -w 100 -l "Parent Cons." ptj;
+checkBox -w 100 -l "Single Mesh" -vis (`checkBox -q -v ct`) -cc smj smj;
+checkBox -w 100 -l "Skin Cls." -vis (`checkBox -q -v jt`) sk;
+setParent -u;
+
+separator -st "none"  -vis on -h 5 ;
+columnLayout ;    
+button -w 349 -h 40 -bgc .6 .6 .6 -l "Create" -c createJ createJ;
+button -w 349  -h 40 -l "Create" -vis (`radioButton  -q -sl othr`) -c createO createO;
+separator -st "none"  -vis on -h 5 ;
+text -w 349  -l "Select deformable object" msgText;
+separator -st "none"  -vis on -h 10 ;
+
+
+
+showWindow mtCwin;
+//________________________________Window_End___________________
+
+}//__MultiController_end-----------
+multiController;
+
+global proc jt()
+{
+	checkBox -e -vis  (`checkBox -q -v jt`) sk;
+	checkBox -e -vis  (`checkBox -q -v jt`) smj;
+	string $jpt = `checkBox -q -v jt`;
+	if 	($jpt==on)
+	{
+	checkBox -e -v off -vis off ptj;
+	}
+	if 	($jpt==off)
+	{
+	checkBox -e -vis on ptj;
+	text -e -l "Select deformable object" msgText;
+	}
+}
+
+global proc msh()
+{
+	rowColumnLayout -e -vis (`radioButton  -q -sl msh`) rcJoint;
+	rowColumnLayout -e -vis (`radioButton  -q -sl msh`) ccJoint;
+	button -e -vis (`radioButton  -q -sl msh`) createJ;
+	text -e -l "Select deformable object" msgText;
+	
+	if (`checkBox -q -v smj`==1)
+	{
+	text -e -l "Select single edge for loop. Do not select edge loop" msgText;
+	}
+	else{text -e -l "Select deformable object" msgText;}
+}
+
+global proc smj()
+{
+	if (`checkBox -q -v smj`==1)
+	{
+	text -e -l "Select single edge for loop. Do not select edge loop" msgText;
+	}
+	else{text -e -l "Select deformable object" msgText;}
+}
+
+global proc othr()
+{
+	rowColumnLayout -e -vis (`radioButton  -q -sl othr`) rcOthr;
+	rowColumnLayout -e -vis (`radioButton  -q -sl othr`) ccOthr;
+	button -e -vis (`radioButton  -q -sl othr`) createO;
+	text -e -l "Select non deformable object" msgText;
+}
+//_________colorbtn__
+global proc colorbtn()
+{
+	string $ctrlSel[] = `ls -sl`;
+    int $Os = `size($ctrlSel)`;
+	for ($all in $ctrlSel)
+	{
+		setAttr ($all + ".overrideEnabled") 1;
+		int $color = `colorIndexSliderGrp -q -v cslider`;
+		if($color > 0)
+		setAttr ($all + ".overrideColor") ($color - 1); 
+	}
+				
+}
+
+
+//__________Making_Curve_
+
+
+
+global proc cCrv()
+{
+	string $cShape = `optionMenuGrp -q -v cShape`;
+	
+	if ($cShape=="Cube")
+	{
+		curve -d 1 -p 1 1 -1 -p 1 -1 -1 -p -1 -1 -1 
+		-p -1 1 -1 -p 1 1 -1 -p 1 1 1 -p -1 1 1 
+		-p -1 1 -1 -p -1 -1 -1 -p -1 -1 1 -p -1 1 1 
+		-p -1 -1 1 -p 1 -1 1 -p 1 1 1 -p 1 -1 1 
+		-p 1 -1 -1 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 
+		-k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 ;
+	}//__cube_end
+	
+	if ($cShape=="Circle")
+	{
+		circle -ch on -o on -nr 0 1 0 -r 2 ;
+	}//__circle_end
+	
+	if ($cShape=="Square")
+	{
+		curve -d 1 -p 1 0 -1 -p -1 0 -1 -p -1 0 1 -p 1 0 1 -p 1 0 -1 -k 0 -k 1 -k 2 -k 3 -k 4 ;
+	}//_square_end
+	
+	if ($cShape=="Sphere")
+	{
+		curve -d 1 -p 0.75 -1.299038 0 -p 0.53033 -1.299038 0.53033 -p 0 -1.299038 0.75 -p -0.53033 -1.299038 0.53033 -p -0.75 
+		-1.299038 0 -p -0.53033 -1.299038 -0.53033 -p 0 -1.299038 -0.75 -p 0.53033 -1.299038 -0.53033 -p 0.75 -1.299038 0 -p 1.299038
+		-0.75 0 -p 0.918559 -0.75 0.918559 -p 0 -0.75 1.299038 -p -0.918559 -0.75 0.918559 -p -1.299038 -0.75 0 -p -0.918559 -0.75 
+		-0.918559 -p 0 -0.75 -1.299038 -p 0.918559 -0.75 -0.918559 -p 1.299038 -0.75 0 -p 1.5 0 0 -p 1.06066 0 1.06066 -p 0 0 1.5 -p 
+		-1.06066 0 1.06066 -p -1.5 0 0 -p -1.06066 0 -1.06066 -p 0 0 -1.5 -p 1.06066 0 -1.06066 -p 1.5 0 0 -p 1.299038 0.75 0 -p 0.918559 0.75 0.918559 
+		-p 0 0.75 1.299038 -p -0.918559 0.75 0.918559 -p -1.299038 0.75 0 -p -0.918559 0.75 -0.918559 -p 0 0.75 -1.299038 -p 0.918559 0.75 -0.918559
+		-p 1.299038 0.75 0 -p 0.75 1.299038 0 -p 0.53033 1.299038 0.53033 -p 0 1.299038 0.75 -p -0.53033 1.299038 0.53033 -p -0.75 1.299038 0 
+		-p -0.53033 1.299038 -0.53033 -p 0 1.299038 -0.75 -p 0.53033 1.299038 -0.53033 -p 0.75 1.299038 0 -p 0 1.5 0 -p 0.53033 1.299038 -0.53033 
+		-p 0.918559 0.75 -0.918559 -p 1.06066 0 -1.06066 -p 0.918559 -0.75 -0.918559 -p 0.53033 -1.299038 -0.53033 -p 0 -1.5 0 -p 0 -1.299038 -0.75 
+		-p 0 -0.75 -1.299038 -p 0 0 -1.5 -p 0 0.75 -1.299038 -p 0 1.299038 -0.75 -p 0 1.5 0 -p -0.53033 1.299038 -0.53033 -p -0.918559 0.75 -0.918559
+		-p -1.06066 0 -1.06066 -p -0.918559 -0.75 -0.918559 -p -0.53033 -1.299038 -0.53033 -p 0 -1.5 0 -p -0.75 -1.299038 0 -p -1.299038 -0.75 0 -p -1.5 0 0 
+		-p -1.299038 0.75 0 -p -0.75 1.299038 0 -p 0 1.5 0 -p -0.53033 1.299038 0.53033 -p -0.918559 0.75 0.918559 -p -1.06066 0 1.06066 -p -0.918559 -0.75 0.918559 
+		-p -0.53033 -1.299038 0.53033 -p 0 -1.5 0 -p 0 -1.299038 0.75 -p 0 -0.75 1.299038 -p 0 0 1.5 -p 0 0.75 1.299038 -p 0 1.299038 0.75 -p 0 1.5 0 
+		-p 0.53033 1.299038 0.53033 -p 0.918559 0.75 0.918559 -p 1.06066 0 1.06066 -p 0.918559 -0.75 0.918559 -p 0.53033 -1.299038 0.53033 -p 0 -1.5 0 -p 0.75 
+		-1.299038 0 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 -k 16 -k 17 -k 18 -k 19 -k 20 -k 21 -k 22 -k 23 -k 24 -k 25 
+		-k 26 -k 27 -k 28 -k 29 -k 30 -k 31 -k 32 -k 33 -k 34 -k 35 -k 36 -k 37 -k 38 -k 39 -k 40 -k 41 -k 42 -k 43 -k 44 -k 45 -k 46 -k 47 -k 48 -k 49 -k 50 -k 51 -k 52 
+		-k 53 -k 54 -k 55 -k 56 -k 57 -k 58 -k 59 -k 60 -k 61 -k 62 -k 63 -k 64 -k 65 -k 66 -k 67 -k 68 -k 69 -k 70 -k 71 -k 72 -k 73 -k 74 -k 75 -k 76 -k 77 -k 78 -k 79 
+		-k 80 -k 81 -k 82 -k 83 -k 84 -k 85 -k 86 -k 87 -k 88 ;
+
+	}//_sphere_end
+	
+	if ($cShape=="Plus")
+	{
+		curve -d 1 -p -0.333333 0 -0.333333 -p -1 0 -0.333333 -p -1 0 0.333333 -p -0.333333 0 0.333333 -p -0.333333 0 1 -p 0.333333 0 1 -p 0.333333 0 0.333333 -p 1 0 0.333333 -p 1 0 -0.333333 -p 0.333333 0 -0.333333 -p 0.333333 0 -1 -p -0.333333 0 -1 -p -0.333333 0 -0.333333 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 ;
+
+	}//_plus_end
+	
+	if ($cShape=="Th. Plus")
+	{
+		curve -d 1 -p -0.2 0 -0.2 -p -1 0 -0.2 -p -1 0 0.2 -p -0.2 0 0.2 -p -0.2 0 1 -p 0.2 0 1 -p 0.2 0 0.2 -p 1 0 0.2 -p 1 0 -0.2 -p 0.2 0 -0.2 -p 0.2 0 -1 -p -0.2 0 -1 -p -0.2 0 -0.2 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 ;
+	}//_th._plus_end
+	
+	if ($cShape=="Pin")
+	{
+		curve -d 3 -p -0.00763035 0 0 -p -0.0357116 0 -0.00981879 -p -0.0918741 0 -0.0294564 -p -1.370385 0 -0.0349424 -p -2.327362 0 -0.321415 -p -2.775261 0 0 -p -2.327362 0 0.321415 -p -1.370385 0 0.0349424 -p -0.0918741 0 0.0294564 -p -0.0357116 0 0.00981879 -p -0.00763035 0 0 -k 0 -k 0 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 8 -k 8 ;
+
+	}//_if_pin_end
+	
+	if ($cShape=="Locator")
+	{
+		curve -d 1 -p 0 0 1 -p 0 0 -1 -p 0 0 0 -p 0 1 0 -p 0 -1 0 -p 0 0 0 -p -1 0 0 -p 1 0 0 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;
+	}//_if_locator_end
+}//--cCrv_end----------
+
+global proc changeShape()
+{
+	string $csel[] = `ls-sl`;
+	for ($i=0;$i<size($csel); ++$i)
+	{
+		select -r $csel[$i];
+		select -r `ls -sl -s -dag`;
+		doDelete;
+		cCrv;
+		string $cCrv[] = `ls-sl`;
+		select -r `ls -sl -s -dag`;
+		rename ($csel[$i]+"Shape");
+		string $cCrvS[] = `ls-sl`;
+		parent -r -s $cCrvS $csel[$i];
+		select -r $cCrv; doDelete;
+		
+	}//_$i_end
+}//--changeShape_end--------
+
+//___________CreateJ_Button_
+global proc createJ()
+{
+	//Checbox Work
+	float $jt = `checkBox  -q -v jt`;
+	float $ct = `checkBox -q -v ct`;
+	float$sk = `checkBox -q -v sk`;
+	float$fk = `checkBox -q -v fk`;
+	float$ptj = `checkBox -q -v ptj`;
+	float$smj = `checkBox -q -v smj`;
+
+string $msel[] = `ls-sl`;
+if ($smj==0)//__if_smj_off
+{
+for($i=0; $i<size($msel); ++$i)
+{
+	//________________IF_Joint_ON_
+	if ($jt==1)
+	{
+		if ($ct==0){
+		select $msel[$i];	
+		newCluster " -envelope 0";
+		string $clsel[] = `ls-sl`;
+		joint ; rename ($msel[$i]+"_J") ; parent -w;
+		string $jsel[] = `ls-sl`;
+		parentConstraint $clsel $jsel ;
+		delete $clsel;
+			if ($sk==1)
+			{
+				skinCluster $msel[$i] $jsel ;
+			}//_if_skin_end
+		}
+	}//_if_jnft_end
+	
+	//________________if_Ctrl_om_
+	if ($ct==1)
+	{
+		select $msel[$i];	
+		newCluster " -envelope 0";
+		string $clsel[] = `ls-sl`;
+		cCrv;
+		rename ($msel[$i]+"_C");
+		string $crsel[] = `ls-sl`;
+		colorbtn;
+		doGroup 0 1 1; rename ($msel[$i]+"_C_Grp");
+		doGroup 0 1 1;rename ($msel[$i]+"_C_Grp1");
+		string $grsel[] = `ls-sl`;
+		parentConstraint $clsel $grsel ;
+		delete $clsel;
+		
+			if ($ptj==1)
+			{
+			parentConstraint $crsel $msel[$i] ;
+			scaleConstraint $crsel $msel[$i] ;
+			}//_if_ptj_end
+		
+			if ($jt==1)
+			{
+				joint ; rename ($msel[$i]+"_Jnt") ; parent -w;
+				string $jsel[] = `ls-sl`;
+				parentConstraint $crsel $jsel ;
+				scaleConstraint $crsel $jsel ;
+				
+				if ($sk==1)
+				{
+				skinCluster $msel[$i] $jsel ;
+				}//_if_skin_end
+			}//__if_jnt_end
+		
+
+	}//_if_ct_end
+	
+}//__$i_end
+
+	if (($fk+$ct)==2)
+	{
+		for($i=0; $i<(size($msel)-1); ++$i)
+		{
+		parent ($msel[$i+1]+"_C_Grp1") ($msel[$i]+"_C") ;
+		}
+	}//_if_fkj_end
+
+
+}//__if_smj_off_end
+
+if ($smj==1)
+{
+	string $osel[] = `ls-fl-os`;
+	select `ls-sl -o`;
+	pickWalk -d up;
+	string $na[] = `ls-sl -o`;
+	for($i=0; $i<size($osel); ++$i)
+	{
+		select $osel[$i];
+		polySelectSp -loop;	
+		newCluster " -envelope 0";
+		string $clsel[] = `ls-sl`;
+		joint ; rename ($na[0]+"_"+($i+1)+"_Jnt");  parent -w;
+		string $jsel[] = `ls-sl`;
+		parentConstraint $clsel $jsel ;
+		delete $clsel;	
+	
+	}//_$i_end
+
+	for($i=0; $i<(size($osel)-1); ++$i)
+	{
+		parent ($na[0]+"_"+($i+2)+"_Jnt") ($na[0]+"_"+($i+1)+"_Jnt") ;
+	}
+	
+	joint -e  -oj yxz -sao xup -ch ($na[0]+"_1_Jnt");
+	joint -e  -oj none -ch ($na[0]+"_"+(size($osel))+"_Jnt");
+
+	if ($sk==1)
+	{
+	skinCluster -bm 1 -sm 0 -mi 6 -dr 4 $na ($na[0]+"_"+($i+1)+"_Jnt") ;
+	}//_if_sk_end
+
+	if ($ct==1)
+	{
+		for($i=0; $i<size($osel); ++$i)
+		{
+		cCrv;
+		rename ($na[0]+"_"+($i+1)+"_C");
+		string $crsel[] = `ls-sl`;
+		colorbtn;
+		doGroup 0 1 1; rename ($na[0]+"_"+($i+1)+"_C_Grp");
+		doGroup 0 1 1;rename ($na[0]+"_"+($i+1)+"_C_Grp1");
+		string $grsel[] = `ls-sl`;
+		parentConstraint ($na[0]+"_"+($i+1)+"_Jnt") $grsel ;
+		DeleteConstraints;
+		parentConstraint $crsel ($na[0]+"_"+($i+1)+"_Jnt");
+		}//_$i_end
+	}//_if_ctj_end
+				
+	if ($fk+$ct==2)
+	{
+		for($i=1; $i<(size($osel)*1); ++$i)
+		{
+		parent ($na[0]+"_"+($i+1)+"_C_Grp1") ($na[0]+"_"+($i*1)+"_C") ;
+		}
+	}//_if_fkj_end
+
+}//_if_smj_on_end
+
+}//--createJ_buton_end-----------
+
+
+//___________CreateO_Button
+global proc createO()
+{
+	//_Checbox_Work
+	float $cto = `checkBox -q -v cto`;
+	float $pto = `checkBox -q -v pto`;
+	float $fko = `checkBox -q -v fko`;
+
+	string $msel[] = `ls-sl`;
+	if ($cto==1)
+	{
+	for($i=0; $i<size($msel); ++$i)
+	{
+		select $msel[$i];	
+		cCrv;
+		rename ($msel[$i]+"_C");
+		string $crsel[] = `ls-sl`;
+		colorbtn;
+		doGroup 0 1 1; rename ($msel[$i]+"_C_Grp");
+		doGroup 0 1 1;rename ($msel[$i]+"_C_Grp1");
+		string $grsel[] = `ls-sl`;
+		parentConstraint $msel[$i] $grsel ;
+		DeleteConstraints;
+		if ($pto==1)
+		{
+		parentConstraint $crsel $msel[$i] ;
+		scaleConstraint $crsel $msel[$i] ;
+		}//_if_pto_end
+				
+	}//_$i_end
+	
+	if ($fko==1)
+	{
+		for($i=0; $i<(size($msel)-1); ++$i)
+		{
+		parent ($msel[$i+1]+"_C_Grp1") ($msel[$i]+"_C") ;
+		}
+	}//_if_fko_end
+	}//_$cto_end
+}//--createO_buton_end----------
+
+//__________Create_joint_Button
+global proc loopJoint()
+{
+	string $sel[] = `ls-sl`;
+	newCluster " -envelope 0";
+	string $cls[] = `ls-sl`;
+	select -cl; joint;
+	string $jt[]=`ls-sl`;
+	parentConstraint $cls $jt;
+	delete $cls;
+	select -r $sel;
+	doBakeNonDefHistory( 1, {"prePost" });
+}//--loopJoint_buton_end----------
+
+//__________Create_ParentChain_Button
+global proc parentChain()
+{
+	string $sel[] = `ls-sl`;
+	for ($i=0;$i<(size($sel)-1);++$i)
+	{
+		parent $sel[$i] $sel[$i+1];
+	}
+
+}//--parentChain_buton_end----------
+
+///_________________________THE___END_________
