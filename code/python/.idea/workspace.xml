@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f545dad5-2f4a-4d32-9937-45841a74dd8a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Utilities/copySelectionToOtherFile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectInfluencedJoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/selectInfluencedJoints.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +19,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/splineJointsScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2601">
+            <state relative-caret-position="187">
               <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
@@ -46,11 +46,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mySkinTools/SkinWeights">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utilities/selectInfluencedJoints.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Utilities/copySelectionToOtherFile.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,6 +95,7 @@
     </findStrings>
     <dirStrings>
       <dir>E:\Univerdad\TFG\AUTORIGGER\code\python\tools</dir>
+      <dir>E:\Univerdad\TFG\AUTORIGGER\code\python\Controls</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -111,6 +133,7 @@
         <option value="$PROJECT_DIR$/Controls/createControl.py" />
         <option value="$PROJECT_DIR$/facial/libs.py" />
         <option value="$PROJECT_DIR$/Utilities/JointsOnCurve" />
+        <option value="$PROJECT_DIR$/Utilities/copySelectionToOtherFile.py" />
       </list>
     </option>
   </component>
@@ -126,6 +149,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,7 +201,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -237,6 +260,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -445,9 +469,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/locator_to_joints.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controls/createControl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-366">
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/splineJointsScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2601">
+        <state relative-caret-position="187">
           <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
@@ -462,13 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/locator_to_joints.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainFile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -476,24 +507,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controls/createControl.py">
+    <entry file="file://$PROJECT_DIR$/mySkinTools/SkinWeights">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-366">
-          <caret lean-forward="true" />
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Utilities/selectInfluencedJoints.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mySkinTools/SkinWeights">
+    <entry file="file://$PROJECT_DIR$/Utilities/copySelectionToOtherFile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
