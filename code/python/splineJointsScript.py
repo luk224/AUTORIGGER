@@ -119,6 +119,7 @@ class splineJoints:
             cmds.select(cl=1)
             if (i > 0):
                 cmds.parent(Joints[i], Joints[i - 1])
+        return Joints
 
 
 
@@ -162,7 +163,31 @@ class splineJoints:
 
         return controls,inputTransformGrps,offsetGrps
 
+    def createNormaLControls(self,suffix,thingsToControl):
+        offsetGrps =[]
+        controls = []
+        inputTransformGrps=[]
+        lastControl =''
+        for i in range(len(thingsToControl)):
+            cmds.select(cl=1)
+            nControl= cmds.circle(nr=(1,0,0),n='{0}_{1}_{2}_{3}_{4}'.format(self.side,self.name,self.zone,str(i),suffix))[0]
+            nGroup= cmds.group( n='{0}_{1}_{2}_{3}_offset'.format(self.side,self.name,self.zone,str(i)))
+            cpc= cmds.parentConstraint(thingsToControl[i],nGroup)
+            cmds.delete(cpc)
+            cmds.select(cl=1)
 
+
+            cpc=cmds.parentConstraint(nControl, thingsToControl[i])
+
+
+            if cmds.objExists(lastControl):
+                cmds.parent(nGroup,lastControl)
+
+            offsetGrps.append(nGroup)
+            lastControl=nControl
+            controls.append(nControl)
+
+        return controls,offsetGrps
     def connectMasterControl(self,ctlObject,thingsToControl):
         #Create direct connections with a multiplier from the ctlObject to the list of things to Control.
 

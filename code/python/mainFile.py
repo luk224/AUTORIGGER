@@ -36,7 +36,7 @@ class mainClass:
 
     def __init__(self):
         print("init mainClass")
-
+        self.spine = splineJoints();
 
     def makeFakeIKChain(self,side="cn", name="tentacle",zone="A"):
 
@@ -46,7 +46,8 @@ class mainClass:
 
         self.spine = splineJoints( side=side, name=name,zone=zone)
         self.defineCurve()
-        self.spine.createJointChain(suffix=suffix)
+        joints = self.spine.createJointChain(suffix=suffix)
+        self.spine.createNormaLControls(name,joints)
 
 
     def defineCurve(self):
