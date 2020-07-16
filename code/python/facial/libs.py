@@ -3,6 +3,7 @@ import maya.cmds as cmds
     #Grupo SDK controlado por ParentConstraint a Jaw y Mouth
     #Grupo Attach controlado por la ribbon
 #Despues de ejecutar el script habra que poner con driven key a un atributo los parent constraints y colocarlo con el GraphEditor.
+#Para hacer la surface, se sacan 2 curves y se usa Loft del menu surface.
 
 ##Cargar esta funcion y CreateControl
 def remap(OldMin, OldMax, NewMin,NewMax, OldValue):
